@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel", "jax"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pbhc"
+dynamic = ["version"]
+description = "Minimal parallel Bayesian hierarchical clustering on graphs in JAX."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Albert Alonso", email = "alonfnt@pm.me"},
+]
+license = {file = "LICENSE"}
+keywords = ["jax", "clustering", "bayesian", "hierarchical-clustering", "graph"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["jax",]
+
+[project.optional-dependencies]
+dev = ["pytest", "scipy"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pbhc.__version__"}
+
+[project.urls]
+"Homepage" = "https://github.com/alonfnt/pbhc"
+"Documentation" = "https://github.com/alonfnt/pbhc"
+"Source" = "https://github.com/alonfnt/pbhc"
+"Bug Tracker" = "https://github.com/alonfnt/pbhc/issues"
